@@ -4,6 +4,22 @@ A beautiful, feature-rich status line theme for Claude Code.
 
 ![Status Line Preview](https://img.shields.io/badge/Claude-Code-success?style=for-the-badge)
 
+## Available Versions
+
+This repository includes two versions of the status line theme:
+
+### 1. **statusline-emoji.sh** (Simple Version)
+- Pure emoji icons, works everywhere
+- No color codes
+- Lightweight and universal
+- Best for terminals with limited color support
+
+### 2. **statusline-colored.sh** (Enhanced Version)
+- 256-color mode support for better visibility
+- Color-coded components
+- Enhanced visual experience
+- Requires terminal with 256-color support
+
 ## Features
 
 - 🕐 **Current Time** - Always know what time it is
@@ -24,23 +40,40 @@ A beautiful, feature-rich status line theme for Claude Code.
 
 ## Installation
 
-1. Copy the script to your Claude config directory:
-   ```bash
-   cp statusline-command.sh ~/.claude/
-   chmod +x ~/.claude/statusline-command.sh
-   ```
+Choose the version you prefer:
 
-2. Add to your `~/.claude/settings.json`:
-   ```json
-   {
-     "statusLine": {
-       "type": "command",
-       "command": "~/.claude/statusline-command.sh"
-     }
-   }
-   ```
+### Simple Emoji Version (Recommended for compatibility)
+```bash
+cp statusline-emoji.sh ~/.claude/
+chmod +x ~/.claude/statusline-emoji.sh
+```
 
-3. Restart Claude Code
+### Enhanced Colored Version (For better visual experience)
+```bash
+cp statusline-colored.sh ~/.claude/
+chmod +x ~/.claude/statusline-colored.sh
+```
+
+Then add to your `~/.claude/settings.json`:
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-emoji.sh"
+  }
+}
+```
+Or for the colored version:
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-colored.sh"
+  }
+}
+```
+
+Restart Claude Code after making changes.
 
 ## Requirements
 
