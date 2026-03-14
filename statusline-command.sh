@@ -189,9 +189,7 @@ if [ -n "$current_dir" ] && [ -d "$current_dir" ]; then
 fi
 
 # Join components with separator
-IFS=" | "
-status_line="${components[*]}"
-unset IFS
+status_line=$(IFS=" | "; echo "${components[*]}")
 
 # Output the status line
 if [ -n "$status_line" ]; then
