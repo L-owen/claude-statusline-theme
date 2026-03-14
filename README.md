@@ -6,7 +6,7 @@ A beautiful, feature-rich status line theme for Claude Code.
 
 ## Available Versions
 
-This repository includes three versions of the status line theme:
+This repository includes two versions of the status line theme:
 
 ### 1. **statusline-emoji.sh** (Simple Version)
 - Pure emoji icons, works everywhere
@@ -14,18 +14,12 @@ This repository includes three versions of the status line theme:
 - Lightweight and universal
 - Best for terminals with limited color support
 
-### 2. **statusline-nerd.sh** (Nerd Font Version) ⭐ Recommended
+### 2. **statusline-nerd.sh** (Nerd Font Version)
 - Nerd Font icons for beautiful visuals
 - 256-color mode support
 - Color-coded components
 - Enhanced visual experience
 - Requires terminal with Nerd Font support (e.g., MesloLGS NF, JetBrains Mono Nerd Font)
-
-### 3. **statusline-colored.sh** (Colored Version)
-- 256-color mode support for better visibility
-- Color-coded components
-- Enhanced visual experience
-- Requires terminal with 256-color support
 
 ## Features
 
@@ -49,22 +43,16 @@ This repository includes three versions of the status line theme:
 
 Choose the version you prefer:
 
-### Simple Emoji Version (For maximum compatibility)
+### Simple Emoji Version
 ```bash
 cp statusline-emoji.sh ~/.claude/
 chmod +x ~/.claude/statusline-emoji.sh
 ```
 
-### Nerd Font Version (Recommended - Beautiful & Feature-rich)
+### Nerd Font Version
 ```bash
 cp statusline-nerd.sh ~/.claude/
 chmod +x ~/.claude/statusline-nerd.sh
-```
-
-### Colored Version (Alternative colored theme)
-```bash
-cp statusline-colored.sh ~/.claude/
-chmod +x ~/.claude/statusline-colored.sh
 ```
 
 Then add to your `~/.claude/settings.json`:
@@ -79,22 +67,12 @@ Then add to your `~/.claude/settings.json`:
 }
 ```
 
-**For Nerd Font version (recommended):**
+**For Nerd Font version:**
 ```json
 {
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline-nerd.sh"
-  }
-}
-```
-
-**For colored version:**
-```json
-{
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline-colored.sh"
   }
 }
 ```
@@ -144,17 +122,11 @@ fi
 🕐 14:30 | ✨ Sonnet | 🌿 main•+ | 🟢 75% | 💬 12k/3k | 🔋 85% | 💎 v20.11.0 | 📂 ~/projects/my-app
 ```
 
-### Nerd Font Version (Recommended)
+### Nerd Font Version
 ```
 󰥔 14:30 │  Sonnet │  main •+ │  75% │  12k/3k │  85% │ 󰎙 v20.11.0 │  ~/projects/my-app
 ```
 *With beautiful 256-color coding for each component*
-
-### Colored Version
-```
-🕐 14:30 | ✨ Sonnet | 🌿 main•+ | 🟢 75% | 💬 12k/3k | 🔋 85% | 💎 v20.11.0 | 📂 ~/projects/my-app
-```
-*With color-coded components*
 
 ## License
 
